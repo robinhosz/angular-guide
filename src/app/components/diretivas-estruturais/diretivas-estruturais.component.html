@@ -1,0 +1,47 @@
+<p *ngIf="condition; else elseBlock">True</p>
+<ng-template #elseBlock>
+    <p>False</p>
+</ng-template>
+
+<hr>
+
+<p *ngIf="conditionClick">True</p>
+
+<p *ngIf="!conditionClick">False</p>
+
+
+<button (click)="onClick()">Clicar</button>
+
+<hr>
+
+<ul>
+    <li *ngFor="let item of list; let i = index;" (click)="onClickEventList(i)">
+        [{{i}}] - {{item.nome}} - idade = {{item.idade}}</li>
+</ul>
+
+
+<input [(ngModel)]="nome">
+
+<input [(ngModel)]="idade">
+
+
+
+<button (click)="onClickList(nome, idade)">Add</button>
+
+<hr>
+
+
+<input type="text" [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+    <p *ngSwitchCase="'robson'">
+        Robson
+    </p>
+
+    <p *ngSwitchCase="'dener'">
+        Dener
+    </p>
+
+    <p *ngSwitchDefault>
+        Deu ruim sua busca
+    </p>
+</div>
