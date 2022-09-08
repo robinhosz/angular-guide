@@ -10,6 +10,11 @@ import { DiretivasEstruturaisComponent } from './components/diretivas-estruturai
 import { DiretivasAtributosComponent } from './components/diretivas-atributos/diretivas-atributos.component';
 import { SharedModule } from './shared/shared.module';
 import { FormsComponent } from './forms/forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsComponent } from './coomponents/reactive-forms/reactive-forms.component';
+import { PagehomeComponent } from './components/pagehome/pagehome.component';
+import { PageErrorComponent } from './components/page-error/page-error.component';
+import { HomeComponent } from './dashboard/pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,18 @@ import { FormsComponent } from './forms/forms.component';
     DataBindingComponent,
     DiretivasEstruturaisComponent,
     DiretivasAtributosComponent,
-    FormsComponent
+    FormsComponent,
+    ReactiveFormsComponent,
+    PagehomeComponent,
+    PageErrorComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
